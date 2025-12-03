@@ -1,0 +1,39 @@
+
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="assets/global.css">
+</head>
+
+<body>
+
+    <!-- Section Containers -->
+    <div id="header-container"></div>
+    <div id="hero-container"></div>
+    <div id="whoiam-container"></div>
+
+    <!-- Section Loader -->
+    <script src="assets/js/sectionLoader.js"></script>
+
+<script>
+    loadSection("header-container",
+        "componets/header/header.html",
+        "componets/header/header.css",
+        "componets/header/header.js");
+
+    loadSection("hero-container",
+        "Pages/home/hero/hero.html",
+        "Pages/home/hero/hero.css",
+        "Pages/home/hero/hero.js");
+
+    loadSection("whoiam-container",
+        "Pages/home/who_i_am/who_i_am.html",
+        "Pages/home/who_i_am/who_i_am.css",
+        "Pages/home/who_i_am/who_i_am.js");
+</script>
+
+</body>
+</html>

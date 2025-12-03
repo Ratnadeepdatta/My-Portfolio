@@ -1,0 +1,22 @@
+ :root {
+     --text-color: #fff;
+     --bg-color: #004343;
+     --hover-color: #ffcc00;
+     --btn-text: #0b7c6d;
+     --background: #0f111a;
+     --p-color: #b3b3b3;
+     --nav-bg-color:#005e52;
+     --font-family: "Poppins", sans-serif;
+     --transition: 0.3s ease;
+ }
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+ body{
+    background: linear-gradient(200deg, #0f111a, #1b1f2b);
+    font-family: var(--font-family) ;
+    color: var(--text-color);
+ }

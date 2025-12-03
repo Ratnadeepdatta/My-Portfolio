@@ -1,0 +1,122 @@
+.about {
+    padding: 80px 140px;
+    background: linear-gradient(90deg, rgba(35, 120, 113, 1) 0%, rgba(29, 140, 122, 1) 39%, rgba(32, 94, 60, 1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.about-content h2 span {
+    background: var(--hover-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1200px;
+    flex-wrap: wrap;
+}
+
+/* Left image */
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.about-image img {
+    width: 380px;
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 40px hwb(172 0% 63%);
+    transition: transform 0.8s ease, box-shadow 0.8s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 60px rgba(245, 255, 57, 0.4);
+}
+
+/* Right content */
+.about-content {
+    flex: 1.2;
+    color: #fff;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--main-color);
+    position: relative;
+}
+
+.about-content p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #cfcfcf;
+    margin-bottom: 30px;
+}
+
+.about-content strong {
+    color: var(--hover-color);
+    font-weight: 600;
+}
+
+.about-content .btn-know {
+    padding: 12px 30px;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid #ffcc00;
+    background: transparent ;
+}
+
+.about-content .btn-know:hover {
+    transform: translateY(-4px);
+    background: var(--hover-color);
+    color: var(--btn-text);
+}
+
+/* Reveal Animations */
+/* .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+} */
+
+/* ---------------------- Responsive ---------------------- */
+@media (max-width: 992px) {
+    .about {
+        padding: 80px 20px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content h2 {
+        font-size: 2rem;
+    }
+
+    .about-content p {
+        font-size: 0.95rem;
+    }
+
+    .about-image img {
+        width: 300px;
+    }
+}
