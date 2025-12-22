@@ -1,0 +1,129 @@
+.contact{
+padding: 60px 0;
+background: #5ee0b5;
+background: linear-gradient(313deg, rgba(94, 224, 181, 0.82) 12%, rgba(36, 125, 116, 0.81) 62%);
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.left-contact h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  color: var(--main-color);
+}
+
+.left-contact h2 span {
+  color: var(--hover-color);
+}
+
+.contact-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-item img {
+  width: 19px;
+  height: 19px;
+}
+
+.contact-item p {
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+.right-contact {
+  background: rgba(29, 11, 11, 0.292);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 16px;
+}
+
+.right-contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.right-contact input,
+.right-contact textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  color: #fff;
+  outline: none;
+}
+
+.right-contact input::placeholder,
+.right-contact textarea::placeholder {
+  color: #cfcfcf;
+}
+
+.right-contact button {
+  margin-top: 10px;
+  padding: 12px 28px;
+  width: fit-content;
+  border: none;
+  border-radius: 15px;
+  background: var(--hover-color);
+  color: var(--btn-text);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.right-contact button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(255, 204, 0, 0.4);
+}
+
+@media (max-width: 900px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+  .left-contact{
+    padding-left: 20px;
+  }
+  .left-contact h2 {
+    font-size: 30px;
+    text-align: left;
+  }
+
+  .contact-icon {
+    align-items: start;
+  }
+
+  .contact-item {
+    justify-content: center;
+  }
+
+  .right-contact {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .form-row {
+    flex-direction: column;
+  }
+}
+

@@ -1,0 +1,101 @@
+.projects{
+background: #0e6153;
+background: linear-gradient(137deg, rgba(14, 97, 83, 1) 1%, rgba(22, 74, 50, 1) 85%);
+    padding: 60px 0;
+    color: var(--text-color);
+} 
+.projects-layout{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.first_box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.first_box h4{
+font-size: 40px;
+font-weight: 600;
+}
+.first_box h4 span{
+    color: var(--span-color);
+-webkit-background-clip: text;
+    /* -webkit-text-fill-color: transparent; */
+}
+.first_box p{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--p-color); 
+    padding: 0 300px;  
+    text-align: center;
+}
+
+.projects-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+.projects-card{
+    background-color: rgb(207, 216, 211);
+    border-radius: 20px;
+    padding: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.p_image img{
+    width: 100%;
+    transform: scale(1);
+     transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.p_image img:hover{
+     transform: scale(1.4);
+}
+.projects-card h3{
+    font-size: 17px;
+    font-weight: 400px;
+    position: relative;
+    color: var(--nav-bg-color);
+    z-index: 1002;
+}
+.projects-card h3:hover{
+    color: var(--text-color);
+}
+.projects-layout button{
+    align-self: center;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    border: 2px solid #ffcc00;
+    background: transparent;
+    color: var(--text-color);
+        cursor: pointer;
+        transition: all 0.3s ease;
+}
+.projects-layout button:hover{
+    background-color: var(--span-color);
+    color: var(--btn-text);
+    transform: translateY(-4px);
+}
+
+@media (max-width: 768px){
+    .projects{
+        padding: 40px 10px;
+    }
+    .first_box h4{
+        font-size: 30px;
+    }
+    .first_box p{
+        padding: 0;
+    }
+.projects-grid{
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+}
+}

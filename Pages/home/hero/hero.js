@@ -1,28 +1,46 @@
 // ---------------- HERO TEXT ANIMATION ----------------
 
-const animatedWord = document.getElementById('animated-word');
-const words = ["Frontend"];
+const word = "Developer";
+const textEl = document.getElementById("text");
+
 let index = 0;
+let isDeleting = false;
 
-function changeWord() {
-    animatedWord.classList.remove("slide-down-in");
-    animatedWord.classList.remove("slide-up-out");
+function animate() {
+    if (!isDeleting) {
+        // TYPE LEFT → RIGHT
+        textEl.textContent = word.substring(0, index + 1);
+        index++;
 
-    animatedWord.classList.add("slide-up-out");
+        if (index === word.length) {
+            isDeleting = true;
+            setTimeout(animate, 1900);
+            return;
+        }
+    } else {
+        // DELETE RIGHT → LEFT
+        textEl.textContent = word.substring(0, index - 1);
+        index--;
 
-    setTimeout(() => {
-        animatedWord.textContent = words[index];
-        animatedWord.classList.remove("slide-up-out");
-        animatedWord.classList.add("slide-down-in");
+        if (index === 0) {
+            isDeleting = false;
+            setTimeout(animate, 60);
+            return;
+        }
+    }
 
-        index = (index + 1) % words.length;
-    }, 400);
+    const speed = isDeleting ? 60 : 70;
+    setTimeout(animate, speed);
 }
 
-animatedWord.classList.add("slide-down-in");
-setInterval(changeWord, 2000);
+animate();
+
 
 // ---------------- LET'S TALK BUTTON REDIRECT ----------------
 document.getElementById("contactBtn").addEventListener("click", () => {
     window.location.href = "../../contact.html";
 });
+
+
+
+
