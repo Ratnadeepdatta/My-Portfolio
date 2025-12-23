@@ -1,2 +1,1 @@
-// const menuToggle = document.getElementById('menu-toggle');
-// const nav = document.getElementById('nav');
+console.log("Footer loaded successfully");
