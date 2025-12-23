@@ -1,0 +1,105 @@
+    .footer {
+        background: #003b3b;
+        color: #fff;
+        padding-top: 50px;
+    }
+
+    .footer-top {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        position: relative;
+    }
+
+    .first-footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        text-align: left;
+        gap: 60px;
+    }
+
+    .footer-social {
+        display: flex;
+        gap: 15px;
+    }
+
+    .footer-social img {
+        width: 22px;
+        transition: transform 0.3s ease;
+        /* color: var(--span-color); */
+    }
+
+    .footer-social a:hover img {
+        transform: translateY(-4px);
+    }
+
+    .footer-logo {
+        width: 140px;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .footer-col h4 {
+        margin-bottom: 15px;
+        color: var(--hover-color);
+    }
+
+    .footer-col p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #dcdcdc;
+    }
+
+    .footerIcon-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding-bottom: 17px;
+    }
+
+    .footerIcon-item img {
+        height: 16px;
+        width: 16px;
+    }
+
+    .footerIcon-item a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 0.95rem;
+    }
+
+    .footerIcon-item a:hover {
+        color: var(--hover-color);
+    }
+
+    .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.9rem;
+        color: #ccc;
+    }
+
+    @media (max-width: 900px) {
+        .footer{
+            padding: 40px 15px 20px 15px;
+        }
+        .footer-top {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+.first-footer {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 40px;
+    }
+        .footer-social {
+            justify-content: left;
+        }
+
+        .footer-bottom {
+            flex-direction: column;
+            gap: 8px;
+            text-align: center;
+        }
+    }
