@@ -1,6 +1,6 @@
     .footer {
         background: #003b3b;
-        color: #fff;
+        color: var(--text-color); 
         padding-top: 50px;
     }
 
@@ -47,7 +47,7 @@
     .footer-col p {
         font-size: 0.95rem;
         line-height: 1.6;
-        color: #dcdcdc;
+        color: var(--text-color);
     }
 
     .footerIcon-item {
@@ -74,7 +74,7 @@
 
     .footer-bottom {
         border-top: 1px solid rgba(255, 255, 255, 0.15);
-        padding: 15px 20px;
+        padding: 15px 0px;
         display: flex;
         justify-content: space-between;
         font-size: 0.9rem;

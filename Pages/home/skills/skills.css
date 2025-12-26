@@ -1,8 +1,8 @@
         .skills {
             background: #1a1919;
-            padding: 50px 100px;
+            padding: 60px 100px;
             text-align: center;
-            color: #fff;
+            color: var(--text-color);
         }
 
         .section-title {
@@ -19,17 +19,17 @@
 
         .section-desc {
             font-size: 16px;
-            color: #cfcfcf;
+            color: var(--p-color);
             max-width: 650px;
             margin: 0 auto 60px;
-            line-height: 1.6;
+            line-height: 1.4;
         }
 
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(4, 220px);
             justify-content: center;
-            gap: 25px;
+            gap: 30px;
 
         }
 
@@ -49,11 +49,11 @@
             padding: 20px;
             font-size: 16px;
             font-weight: 500;
-            color: #fff;
+            color: var(--text-color);
         }
 
         .skill-item:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
             box-shadow: 0 10px 25px rgba(84, 83, 27, 0.3);
         }
 
