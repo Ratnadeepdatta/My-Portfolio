@@ -38,7 +38,7 @@
             border-radius: 16px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             box-shadow: 0px 1px 6px lab(7.47% -1.62 2.97 / 0.438);
-            transform-origin: center;
+            /* transform-origin: center; */
             display: flex;
             flex-direction: column;
             gap: 20px;
