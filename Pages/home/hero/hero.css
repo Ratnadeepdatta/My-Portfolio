@@ -110,9 +110,6 @@
 }
 .hero-image img {
     max-width: 100%;
-    max-width: 720px;
-    height: auto;
-    display: block;
 }
 
 @media (max-width: 768px) {
@@ -144,13 +141,8 @@
 
     .hero-image {
         width: 90%;
-        margin: 0 auto;
     }
 
-    .hero-image img {
-        max-height: 50vh;    
-        object-fit: contain;  
-    }
     #text {
         font-family: var(--font-family);
     }
