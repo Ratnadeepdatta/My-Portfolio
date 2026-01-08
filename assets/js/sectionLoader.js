@@ -33,3 +33,66 @@ window.loadSection = function (containerId, htmlPath, cssPath, jsPath) {
     })
     .catch(err => console.error(err));
 };
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  loadSection(
+    "header-container",
+    "components/header/header.html",
+    "components/header/header.css",
+    "components/header/header.js"
+  );
+
+  loadSection(
+    "hero-container",
+    "Pages/home/hero/hero.html",
+    "Pages/home/hero/hero.css",
+    "Pages/home/hero/hero.js"
+  );
+
+  loadSection(
+    "whoiam-container",
+    "Pages/home/who_i_am/who_i_am.html",
+    "Pages/home/who_i_am/who_i_am.css",
+    "Pages/home/who_i_am/who_i_am.js"
+  );
+
+  loadSection(
+    "skills-container",
+    "Pages/home/skills/skills.html",
+    "Pages/home/skills/skills.css",
+    "Pages/home/skills/skills.js"
+  );
+
+  loadSection(
+    "projects-container",
+    "Pages/home/projects/home_projects.html",
+    "Pages/home/projects/home_projects.css",
+    "Pages/home/projects/home_projects.js"
+  );
+
+  loadSection(
+    "work-process",
+    "Pages/home/work_process/work_process.html",
+    "Pages/home/work_process/work_process.css",
+    "Pages/home/work_process/work_process.js"
+  );
+
+  loadSection(
+    "contact",
+    "Pages/home/contact_section/home_contact.html",
+    "Pages/home/contact_section/home_contact.css",
+    "Pages/home/contact_section/home_contact.js"
+  );
+
+  loadSection(
+    "footer-container",
+    "components/footer/footer.html",
+    "components/footer/footer.css",
+    "components/footer/footer.js"
+  );
+
+});
