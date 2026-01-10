@@ -6,7 +6,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   const phone = this.phone.value;
   const message = this.message.value;
 
-  const whatsappNumber = "918974287067"; // country code + number
+  const whatsappNumber = "918974287067"; 
 
   const whatsappMessage = 
     `Hello Ratnadeep,%0A%0A` +
