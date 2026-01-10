@@ -18,7 +18,10 @@
 }
 
 .about-image img {
-    max-width: 100%;
+    width: 100%;
+    height: auto;
+    max-width: 410px;
+    display: block;
     border-radius: 20px;
     box-shadow: 0 0 40px hwb(172 0% 63%);
     transition: transform 0.6s ease, box-shadow 0.6s ease;

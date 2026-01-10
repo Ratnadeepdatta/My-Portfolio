@@ -58,6 +58,9 @@
 
 .p_image img {
     width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
     transform: scale(1);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     border-radius: 20px;
