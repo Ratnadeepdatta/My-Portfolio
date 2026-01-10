@@ -1,6 +1,6 @@
     .footer {
         background: #003b3b;
-        color: var(--text-color); 
+        color: var(--text-color);
         padding-top: 50px;
     }
 
@@ -39,8 +39,14 @@
         text-align: left;
     }
 
-    .footer-col h4 {
+    .footer-col h3 {
         margin-bottom: 15px;
+        font-size: 16px;
+        color: var(--hover-color);
+    }
+    .footer-col h4{
+        margin-bottom: 15px;
+        font-size: 16px;
         color: var(--hover-color);
     }
 
@@ -82,17 +88,20 @@
     }
 
     @media (max-width: 900px) {
-        .footer{
+        .footer {
             padding: 40px 15px 20px 15px;
         }
+
         .footer-top {
             grid-template-columns: 1fr;
             text-align: center;
         }
-.first-footer {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 40px;
-    }
+
+        .first-footer {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 40px;
+        }
+
         .footer-social {
             justify-content: left;
         }

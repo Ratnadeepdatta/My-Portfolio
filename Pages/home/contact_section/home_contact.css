@@ -85,8 +85,9 @@ background: linear-gradient(313deg, rgba(94, 224, 181, 0.82) 12%, rgba(36, 125, 
   border: none;
   border-radius: 15px;
   background: var(--hover-color);
-  color: var(--btn-text);
-  font-weight: 600;
+  /* color: var(--btn-text); */
+  color: #003b3b;
+  font-weight: 700;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }

@@ -19,12 +19,12 @@
     gap: 20px;
 }
 
-.first_box h4 {
+.first_box h2 {
     font-size: 40px;
     font-weight: 600;
 }
 
-.first_box h4 span {
+.first_box h2 span {
     color: var(--span-color);
     -webkit-background-clip: text;
     /* -webkit-text-fill-color: transparent; */
@@ -103,7 +103,7 @@
         padding: 40px 10px;
     }
 
-    .first_box h4 {
+    .first_box h2 {
         font-size: 30px;
     }
 

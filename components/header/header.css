@@ -10,14 +10,14 @@ header {
     z-index: 1000;
 }
 
-header .container-header{
-   width: 100%;
-   max-width: 1200px;
-   padding: 10px 20px;
-   margin: 0 auto;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
+header .container-header {
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px 20px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .menu {
@@ -87,6 +87,8 @@ nav a:hover::after {
 }
 
 .btn-talk {
+    display: inline-block;
+    text-decoration: none;
     padding: 12px 30px;
     border: none;
     background-color: var(--hover-color);
@@ -95,7 +97,7 @@ nav a:hover::after {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    width: fit-content;
+    
 }
 
 .btn-talk:hover {
@@ -142,9 +144,10 @@ nav a:hover::after {
 }
 
 @media (max-width: 768px) {
- header .container-header{
-    padding: 6px 15px;
- }
+    header .container-header {
+        padding: 6px 15px;
+    }
+
     header.scrolled {
         padding: 0px;
         width: 96%;
