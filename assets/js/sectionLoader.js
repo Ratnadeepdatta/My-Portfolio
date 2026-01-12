@@ -1,5 +1,5 @@
 
-window.loadSection = function (containerId, htmlPath, cssPath, jsPath) {
+function loadSection(containerId, htmlPath, cssPath, jsPath, callback) {
   const container = document.getElementById(containerId);
 
   if (!container) {
@@ -8,14 +8,14 @@ window.loadSection = function (containerId, htmlPath, cssPath, jsPath) {
   }
 
   fetch(htmlPath)
-    .then(res => {
+    .then((res) => {
       if (!res.ok) throw new Error(`Failed to load ${htmlPath}`);
       return res.text();
     })
-    .then(html => {
+    .then((html) => {
       container.innerHTML = html;
 
-      // ---------- CSS ----------
+      // ✅ Load CSS once
       if (cssPath && !document.querySelector(`link[href="${cssPath}"]`)) {
         const link = document.createElement("link");
         link.rel = "stylesheet";
@@ -23,89 +23,136 @@ window.loadSection = function (containerId, htmlPath, cssPath, jsPath) {
         document.head.appendChild(link);
       }
 
-      // ---------- JS ----------
+      // ✅ Load JS once + wait until script loaded
       if (jsPath && !document.querySelector(`script[src="${jsPath}"]`)) {
         const script = document.createElement("script");
         script.src = jsPath;
         script.defer = true;
+
+        script.onload = () => {
+          // ✅ Callback after JS loaded
+          if (typeof callback === "function") callback();
+        };
+
         document.body.appendChild(script);
+      } else {
+        // ✅ If JS already loaded, just callback
+        if (typeof callback === "function") callback();
       }
     })
-    .catch(err => console.error(err));
-};
+    .catch((err) => console.error(err));
+}
 
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
+// window.loadSection = function (containerId, htmlPath, cssPath, jsPath) {
+//   const container = document.getElementById(containerId);
 
-  loadSection(
-    "header-container",
-    "components/header/header.html",
-    "components/header/header.css",
-    "components/header/header.js"
-  );
+//   if (!container) {
+//     console.warn(`Container not found: ${containerId}`);
+//     return;
+//   }
 
-  loadSection(
-    "hero-container",
-    "Pages/home/hero/hero.html",
-    "Pages/home/hero/hero.css",
-    "Pages/home/hero/hero.js"
-  );
+//   fetch(htmlPath)
+//     .then(res => {
+//       if (!res.ok) throw new Error(`Failed to load ${htmlPath}`);
+//       return res.text();
+//     })
+//     .then(html => {
+//       container.innerHTML = html;
 
-  loadSection(
-    "whoiam-container",
-    "Pages/home/who_i_am/who_i_am.html",
-    "Pages/home/who_i_am/who_i_am.css",
-    "Pages/home/who_i_am/who_i_am.js"
-  );
+//       // ---------- CSS ----------
+//       if (cssPath && !document.querySelector(`link[href="${cssPath}"]`)) {
+//         const link = document.createElement("link");
+//         link.rel = "stylesheet";
+//         link.href = cssPath;
+//         document.head.appendChild(link);
+//       }
 
-  loadSection(
-    "skills-container",
-    "Pages/home/skills/skills.html",
-    "Pages/home/skills/skills.css",
-    "Pages/home/skills/skills.js"
-  );
+//       // ---------- JS ----------
+//       if (jsPath && !document.querySelector(`script[src="${jsPath}"]`)) {
+//         const script = document.createElement("script");
+//         script.src = jsPath;
+//         script.defer = true;
+//         document.body.appendChild(script);
+//       }
+//     })
+//     .catch(err => console.error(err));
+// };
 
-  loadSection(
-    "projects-container",
-    "Pages/home/projects/home_projects.html",
-    "Pages/home/projects/home_projects.css",
-    "Pages/home/projects/home_projects.js"
-  );
 
-  loadSection(
-    "work-process",
-    "Pages/home/work_process/work_process.html",
-    "Pages/home/work_process/work_process.css",
-    "Pages/home/work_process/work_process.js"
-  );
 
-  loadSection(
-    "contact",
-    "Pages/home/contact_section/home_contact.html",
-    "Pages/home/contact_section/home_contact.css",
-    "Pages/home/contact_section/home_contact.js"
-  );
 
-  loadSection(
-    "footer-container",
-    "components/footer/footer.html",
-    "components/footer/footer.css",
-    "components/footer/footer.js"
-  );
+// document.addEventListener("DOMContentLoaded", () => {
 
-});
+//   loadSection(
+//     "header-container",
+//     "components/header/header.html",
+//     "components/header/header.css",
+//     "components/header/header.js"
+//   );
 
-// global.js using for reveal animation
-document.addEventListener("DOMContentLoaded", () => {
-  const revealObserver = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add("active");
-      obs.unobserve(entry.target);
-    });
-  }, { threshold: 0.2 });
+//   loadSection(
+//     "hero-container",
+//     "Pages/home/hero/hero.html",
+//     "Pages/home/hero/hero.css",
+//     "Pages/home/hero/hero.js"
+//   );
 
-  document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
-});
+//   loadSection(
+//     "whoiam-container",
+//     "Pages/home/who_i_am/who_i_am.html",
+//     "Pages/home/who_i_am/who_i_am.css",
+//     "Pages/home/who_i_am/who_i_am.js"
+//   );
+
+//   loadSection(
+//     "skills-container",
+//     "Pages/home/skills/skills.html",
+//     "Pages/home/skills/skills.css",
+//     "Pages/home/skills/skills.js"
+//   );
+
+//   loadSection(
+//     "projects-container",
+//     "Pages/home/projects/home_projects.html",
+//     "Pages/home/projects/home_projects.css",
+//     "Pages/home/projects/home_projects.js"
+//   );
+
+//   loadSection(
+//     "work-process",
+//     "Pages/home/work_process/work_process.html",
+//     "Pages/home/work_process/work_process.css",
+//     "Pages/home/work_process/work_process.js"
+//   );
+
+//   loadSection(
+//     "contact",
+//     "Pages/home/contact_section/home_contact.html",
+//     "Pages/home/contact_section/home_contact.css",
+//     "Pages/home/contact_section/home_contact.js"
+//   );
+
+//   loadSection(
+//     "footer-container",
+//     "components/footer/footer.html",
+//     "components/footer/footer.css",
+//     "components/footer/footer.js"
+//   );
+
+// });
+
+// // global.js using for reveal animation
+// document.addEventListener("DOMContentLoaded", () => {
+//   const revealObserver = new IntersectionObserver((entries, obs) => {
+//     entries.forEach(entry => {
+//       if (!entry.isIntersecting) return;
+//       entry.target.classList.add("active");
+//       obs.unobserve(entry.target);
+//     });
+//   }, { threshold: 0.2 });
+
+//   document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
+// });
