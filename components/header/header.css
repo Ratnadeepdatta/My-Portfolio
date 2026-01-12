@@ -93,15 +93,14 @@ nav a:hover::after {
     border: none;
     background-color: var(--hover-color);
     border-radius: 50px;
-    color: var(--btn-text);
-    font-weight: 600;
+    color: var(--new-btn-text);
+    font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
     
 }
 
 .btn-talk:hover {
-    color: #248282;
     transform: translateY(-4px);
 }
 

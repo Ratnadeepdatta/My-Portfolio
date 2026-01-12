@@ -68,7 +68,7 @@
     height: 1.05em;
     background: var(--span-color);
     margin-left: 6px;
-    vertical-align: bottom;
+    vertical-align: -0.15em;
 }
 
 .content p {

@@ -10,6 +10,7 @@
      --transition: 0.3s ease;
      --background-card: #08584d87;
      --border-color:2px solid #fdd526;
+     --new-btn-text: #003b3b;
      --background: linear-gradient(160deg, rgba(0, 94, 82, 1) 42%, rgba(28, 186, 164, 1) 98%, rgba(29, 188, 166, 1) 82%);
      
  }
@@ -32,7 +33,7 @@
 }
 html {
   scroll-behavior: smooth;
-  
+
 }
 
 h1 {

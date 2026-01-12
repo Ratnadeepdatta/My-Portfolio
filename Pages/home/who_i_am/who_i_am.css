@@ -14,13 +14,16 @@
     flex: 1;
     display: flex;
     justify-content: center;
-    height: 500px;
+    align-items: center;
+    height: auto;
 }
 
 .about-image img {
     width: 100%;
+    max-width:410px;
     height: auto;
-    max-width: 410px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
     display: block;
     border-radius: 20px;
     box-shadow: 0 0 40px hwb(172 0% 63%);
