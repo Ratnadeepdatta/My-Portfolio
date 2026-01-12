@@ -96,3 +96,16 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
 });
+
+// global.js using for reveal animation
+document.addEventListener("DOMContentLoaded", () => {
+  const revealObserver = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("active");
+      obs.unobserve(entry.target);
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
+});

@@ -21,6 +21,7 @@
     opacity: 0;
     transform: translateY(30px);
     animation: fadeUp 1s ease forwards 0.3s;
+    min-width: 320px;
 }
 
 @keyframes fadeUp {
@@ -54,12 +55,22 @@
     line-height: 1.2;
     color: var(--span-color);
     margin: 0;
-    display: inline-block;
+    /* display: inline-block; */
     font-family: var(--font-family);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.typing-wrap{
+  display:inline-flex;
+  align-items:center;
 }
 
 #text {
     color: aliceblue;
+    display: inline-block;
+     white-space:nowrap;
 }
 
 .cursor {
@@ -69,7 +80,8 @@
     background: var(--span-color);
     margin-left: 6px;
     vertical-align: -0.15em;
-}
+    }
+
 
 .content p {
     font-size: 16px;
