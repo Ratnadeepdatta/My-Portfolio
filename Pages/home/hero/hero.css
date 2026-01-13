@@ -18,18 +18,9 @@
     flex-direction: column;
     justify-content: center;
     gap: 15px;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeUp 1s ease forwards 0.3s;
     min-width: 320px;
 }
 
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 .content h4 {
     font-size: 16px;
