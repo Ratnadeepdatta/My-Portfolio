@@ -11,7 +11,13 @@
     <meta name="author" content="Ratnadeep Datta">
     <link rel="preload" href="assets/global.css?v=1.0.2" as="style" />
     <link rel="stylesheet" href="assets/global.css?v=1.0.2" />
-    <link rel="preload" as="image" href="assets/images/hero_image-640.webp" type="image/webp" fetchpriority="high">
+    <!-- <link rel="preload" as="image" href="assets/images/hero_image-640.webp" type="image/webp" fetchpriority="high"> -->
+    <link rel="preload" as="image" href="assets/images/hero_image-480.webp" imagesrcset="
+    assets/images/hero_image-480.webp 480w,
+    assets/images/hero_image-768.webp 768w,
+    assets/images/hero_image-1024.webp 1024w
+  " imagesizes="(max-width: 768px) 90vw, 570px" type="image/webp" fetchpriority="high" />
+
     <link rel="canonical" href="https://ratnadeepdatta.github.io/My-Portfolio/" />
 
 </head>
