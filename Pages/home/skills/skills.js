@@ -1,37 +1,42 @@
-    
-    
-    const revealElements = document.querySelectorAll(".reveal");
-    window.addEventListener("scroll", () => {
-        revealElements.forEach((reveal) => {
 
-            const windowHeight = window.innerHeight;
-            const elementTop = reveal.getBoundingClientRect().top;
-            // Delay animation trigger
-            const revealPoint = -200;
 
-            if (elementTop < windowHeight - revealPoint) {
-                reveal.classList.add("active");
+    console.log("Skills progress loaded");
 
-                const fill = reveal.querySelector(".progress-fill");
-                const text = reveal.querySelector(".progress-text");
+const skillItems = document.querySelectorAll(".skill-item");
 
-                if (!fill || !text) return;
+const skillObserver = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
 
-                if (!fill.classList.contains("animated")) {
-                    const progressValue = parseInt(fill.dataset.progress);
-                    fill.classList.add("animated");
+      const item = entry.target;
+      const fill = item.querySelector(".progress-fill");
+      const text = item.querySelector(".progress-text");
 
-                    fill.style.width = `${progressValue}%`;
+      if (!fill || !text) return;
 
-                    let count = 0;
-                    const interval = setInterval(() => {
-                        count++;
-                        text.textContent = count + "%";
-                        if (count >= progressValue) clearInterval(interval);
-                    }, 20);
-                }
-            }
-        });
+      // Run only once
+      if (fill.classList.contains("animated")) return;
+
+      fill.classList.add("animated");
+
+      const progressValue = parseInt(fill.dataset.progress, 10) || 0;
+      fill.style.width = progressValue + "%";
+
+      let count = 0;
+      const interval = setInterval(() => {
+        count++;
+        text.textContent = count + "%";
+
+        if (count >= progressValue) {
+          clearInterval(interval);
+        }
+      }, 20);
+
+      observer.unobserve(item); // only once
     });
+  },
+  { threshold: 0.3 }
+);
 
-    
+skillItems.forEach(item => skillObserver.observe(item));
