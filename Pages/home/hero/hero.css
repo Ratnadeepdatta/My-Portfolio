@@ -58,8 +58,7 @@
 }
 .typing-wrap{
   display:inline-flex;
-  align-items:center;
-  min-width: 240px;
+  min-width: 230px;
   white-space: nowrap;
 }
 
@@ -85,6 +84,7 @@
     line-height: 1.4;
     padding-right: 30px;
     color: var(--p-color);
+    min-height: 52px;
 }
 
 .content .btn {
@@ -131,11 +131,13 @@
     }
 
     .hero .container {
-        flex-direction: column-reverse;
+        flex-direction: column;
         gap: 20px;
+        text-align: left;
     }
 
     .content {
+        order: 2;
         margin-top: 0;
         justify-content: center;
         width: 100%;
@@ -154,16 +156,25 @@
     }
 
 .typing-wrap{
-  min-width: 155px;
+  min-width: 220px;
+  display: inline-block;
+  white-space: nowrap;
   
 }
 
     .hero-image {
-        width: 90%;
+        width: 100%;
+        order: 1;
     }
 
     .hero-img {
+        width: 100%;
         max-width: 340px;
+        height: auto;
+        aspect-ratio: 570 / 571;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto;
 
     }
 

@@ -38,10 +38,10 @@
                 border-radius: 16px;
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
                 box-shadow: 0px 1px 6px lab(7.47% -1.62 2.97 / 0.438);
-                /* transform-origin: center; */
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
+                min-height: 170px;
             }
 
             .card-name {
@@ -73,6 +73,8 @@
                 background: lab(46.25% -3.14 2.67 / 0.438);
                 border-radius: 50%;
                 padding: 10px;
+                display: block;
+                object-fit: contain;
             }
 
             .progress-bar {
@@ -106,6 +108,9 @@
                 font-weight: 600;
                 color: var(--span-color);
                 z-index: 3;
+                display: block;
+                width: 42px;
+                text-align: right;
             }
 
             @media (max-width: 768px) {
