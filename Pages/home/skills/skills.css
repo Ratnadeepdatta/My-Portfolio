@@ -3,6 +3,7 @@
                 padding: 60px 100px;
                 text-align: center;
                 color: var(--text-color);
+                min-height: 650px;
             }
 
             .section-title {
@@ -41,7 +42,7 @@
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
-                min-height: 170px;
+                min-height: 180px;
             }
 
             .card-name {
@@ -96,7 +97,8 @@
                 left: 0;
                 top: 0;
                 background: var(--btn-text);
-                height: 100%;
+                /* height: 100%; */
+                height: 25px;
                 width: 0%;
                 border-radius: 50px;
                 transition: width 2s ease-in-out;
