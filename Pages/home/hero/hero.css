@@ -156,7 +156,7 @@
     }
 
 .typing-wrap{
-  min-width: 220px;
+  min-width: 155px;
   display: inline-block;
   white-space: nowrap;
   
@@ -167,7 +167,7 @@
         order: 1;
     }
 
-    .hero-img {
+    .hero-image img {
         width: 100%;
         max-width: 340px;
         height: auto;

@@ -33,13 +33,11 @@ function animate() {
     setTimeout(animate, speed);
 }
 
-animate();
+window.addEventListener("load", () => {
+  requestAnimationFrame(() => animate());
+});
+// animate();
 
-
-// ---------------- LET'S TALK BUTTON REDIRECT ----------------
-// document.getElementById("contactBtn").addEventListener("click", () => {
-//     window.location.href = "../../contact.html";
-// });
 
 const contactBtn = document.getElementById("contactBtn");
 if (contactBtn) {
