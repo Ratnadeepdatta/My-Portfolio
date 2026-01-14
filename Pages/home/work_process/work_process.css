@@ -1,6 +1,7 @@
     .work-process {
         padding: 80px 0;
         color: var(--text-color);
+        
     }
 
     .work_process-layout {
@@ -57,7 +58,7 @@
         transition: transform -0.3s ease;
     }
 
-    .wp-card.active:hover {
+    .wp-card:hover {
         transform: translateY(-5px);
         box-shadow: 0 15px 35px rgba(255, 255, 255, 0.12);
     }
@@ -122,16 +123,17 @@
     .wp-right {
         margin-right: -300px;
     }
-
+/* 
     .reveal {
         opacity: 0;
         transform: translateY(5px);
         transition: opacity 0.3s ease, transform 0.3s ease;
+        transition: none;
     }
 
     .reveal.active {
         opacity: 1;
-        /* transform: translateY(0); */
+        transform: translateY(0);
     }
 
     .reveal.delay-1 {
@@ -144,7 +146,7 @@
 
     .reveal.delay-3 {
         transition-delay: 0.1.7s;
-    }
+    } */
 
     @media (max-width: 768px){
         .wp-first h4{
