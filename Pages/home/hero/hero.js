@@ -33,10 +33,10 @@ function animate() {
     setTimeout(animate, speed);
 }
 
-window.addEventListener("load", () => {
-  requestAnimationFrame(() => animate());
-});
-// animate();
+// window.addEventListener("load", () => {
+//   requestAnimationFrame(() => animate());
+// });
+animate();
 
 
 const contactBtn = document.getElementById("contactBtn");
