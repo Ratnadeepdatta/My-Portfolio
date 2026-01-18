@@ -147,12 +147,12 @@ document.addEventListener("DOMContentLoaded", () => {
     "components/header/header.js"
   );
 
-  loadSection(
-    "hero-container",
-    "Pages/home/hero/hero.html",
-    "Pages/home/hero/hero.css",
-    "Pages/home/hero/hero.js"
-  );
+  // loadSection(
+  //   "hero-container",
+  //   "Pages/home/hero/hero.html",
+  //   "Pages/home/hero/hero.css",
+  //   "Pages/home/hero/hero.js"
+  // );
 
   loadSection(
     "whoiam-container",
