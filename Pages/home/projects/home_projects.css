@@ -41,7 +41,7 @@
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 }
 
@@ -81,9 +81,9 @@
     z-index: 1002;
 }
 
-.projects-card h3:hover {
+/* .projects-card h3:hover {
     color: var(--text-color);
-}
+} */
 
 .projects-layout button {
     display: none;
