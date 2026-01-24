@@ -113,26 +113,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
+   
 
 }
 
 .hero-image img {
     width: 100%;
     height: auto;
-    max-width: 570px;
+    max-width: 370px;
     display: block;
     aspect-ratio: 570 / 571;
-    object-fit: cover;    
+    object-fit: cover;   
 }
 
 @media (max-width: 768px) {
     .hero {
-        padding: 90px 5px;
+        padding:90px 5px;
+        /* height: 90vh; */
     }
 
     .hero .container {
         flex-direction: column;
-        gap: 20px;
+        gap: 0px;
         text-align: left;
     }
 
@@ -169,7 +171,7 @@
 
     .hero-image img {
         width: 100%;
-        max-width: 340px;
+        max-width: 540px;
         height: auto;
         aspect-ratio: 570 / 571;
         object-fit: cover;

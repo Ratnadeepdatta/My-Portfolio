@@ -78,7 +78,7 @@
     font-weight: 400px;
     position: relative;
     color: var(--nav-bg-color);
-    z-index: 1002;
+    z-index: 999;
 }
 
 /* .projects-card h3:hover {
