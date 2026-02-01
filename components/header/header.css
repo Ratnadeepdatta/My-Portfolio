@@ -31,7 +31,7 @@ header .container-header {
 }
 
 header.scrolled {
-      background: linear-gradient(3deg, rgba(36, 130, 130, 1) 26%, rgba(22, 105, 105, 1) 100%, rgba(74, 120, 120, 1) 59%);
+    background: linear-gradient(3deg, rgba(36, 130, 130, 1) 26%, rgba(22, 105, 105, 1) 100%, rgba(74, 120, 120, 1) 59%);
 
     max-width: 1200px;
 }
@@ -67,7 +67,8 @@ nav a {
     font-weight: 500;
     transition: var(--transition);
 }
-.talk{
+
+.talk {
     display: none;
 }
 
@@ -101,11 +102,13 @@ nav a:hover::after {
     font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
-    
+
 }
 
 .btn-talk:hover {
     transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(255, 204, 0, 0.4);
+
 }
 
 /*  Mobile Menu */
@@ -129,7 +132,7 @@ nav a:hover::after {
     display: block;
     width: 100%;
     height: 2px;
-    background: var(--hover-color);  
+    background: var(--hover-color);
     border-radius: 3px;
     transition: all 0.3s ease;
 }
@@ -181,9 +184,10 @@ nav a:hover::after {
         flex-direction: column;
         gap: 30px;
     }
-    .talk{
-    display: flex;
-}
+
+    .talk {
+        display: flex;
+    }
 
     .menu-toggle {
         display: flex;
