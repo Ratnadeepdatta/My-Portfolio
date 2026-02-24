@@ -91,7 +91,6 @@
 .content .btn {
     padding: 12px 30px;
     background: var(--span-color);
-    border: var(--border-color);
     color: var(--btn-b-text);
     font-weight: 600;
     border-radius: 50px;

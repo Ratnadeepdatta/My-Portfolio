@@ -22,7 +22,7 @@ function loadSection(containerId, htmlPath, cssPath, jsPath) {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  loadSection(
+  loadSection(  
     "header-container",
     "components/header/header.html",
     "components/header/header.css",
