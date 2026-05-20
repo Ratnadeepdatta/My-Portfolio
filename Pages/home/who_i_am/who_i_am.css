@@ -82,6 +82,7 @@
     color: var(--btn-b-text);
     cursor: pointer;
     transition: all 0.3s ease;
+    border: none;
 }
 
 .about-content .btn-know:hover {

@@ -98,6 +98,7 @@
     transition: all 0.3s ease;
     width: fit-content;
     margin-top: 14px;
+    border: none;
 }
 
 .content .btn:hover {

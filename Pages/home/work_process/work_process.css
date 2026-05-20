@@ -55,12 +55,14 @@
         display: flex;
         align-items: center;
         column-gap: 30px;
-        transition: transform -0.3s ease;
+        /* transition: transform -0.3s ease; */
+        transition: all 0.3s;
     }
 
     .wp-card:hover {
-        transform: translateY(-5px);
+        transform: translateY(-8px);
         box-shadow: 0 15px 35px rgba(255, 255, 255, 0.12);
+        transition: all 0.3s;
     }
 
     .wp-content {
